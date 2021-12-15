@@ -1,10 +1,3 @@
----
-tags: [Import-90e4]
-title: Yolov5-Processing
-created: '2021-12-15T03:01:35.066Z'
-modified: '2021-12-15T04:45:46.318Z'
----
-
 # Yolov5-Processing
 ## accomplished
 - 2021.12.15
