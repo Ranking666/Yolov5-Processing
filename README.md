@@ -6,6 +6,10 @@
 - 2021.12.27
   - change backbone to shufflenetv2
   - change backbone to efficientnetv2
+- 2022.05.23
+  - Finish network slimming pruning YOLOv5 series
+  - Finish network SFP pruning YOLOv5 series
+  - Finish network FPGM pruning YOLOv5 series
 
 ## Requirements
 ```
