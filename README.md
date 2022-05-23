@@ -32,6 +32,32 @@ python eagleeye.py --data data/VisDrone.yaml --weight the_first_step_trained_mod
 ```
 python train.py --data data/VisDrone.yaml --imgsz 640 --weights pruned_weight.pt --cfg models/yolov5s_pruned.yaml  --device 0,1,2,3 --nosave --sync-bn
 ```
+#### FPGM / SFP
+cd yolov5_fpgm_slimming_sfp
+1. soft mask
+```
+python train.py --data data/VisDrone.yaml --imgsz 640 --weights yolov5s.pt --cfg models/yolov5s_pruning.
+yaml --device 0,1,2,3 --sfp/fpgm --sfp_ratio/fpgm_ratio 0.5 --path models/yolov5s_pruned.yaml
+```
+2. Fine_tuning
+```
+python train.py --data data/VisDrone.yaml --imgsz 640 --weights pruned_weights.pt --cfg models/yolov5s_fpgm/sfp_pruned.yaml --device 0,1,2,3
+```
+#### network_slimming
+cd yolov5_fpgm_slimming_sfp
+1. BatchNorm Layer \gamma 
+```
+python train.py --data data/VisDrone.yaml --imgsz 640 --weights yolov5s.pt --cfg models/yolov5s_pruning.yaml --device 0,1,2,3 -sr 
+```
+2. BatchNorm Layer pruning
+```
+python prune_slimming.py --weights the_first_step_trained_model --data data/VisDrone.yaml --device 0
+```
+3. Fine_tuning
+```
+python train.py --data data/VisDrone.yaml --imgsz 640 --weights the_second_step_get_model --cfg models/yolov5s_slimm_pruned.yaml --device 0,1,2,3
+```
+
 ## Results
 | Models | mAP@.5| mAP@.5:.95 | GFLOPS |Parameters(M)|
 | ------ | ------| -----------|--------|----------   | 
