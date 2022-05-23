@@ -1,0 +1,44 @@
+# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
+# COCO128 dataset https://www.kaggle.com/ultralytics/coco128 (first 128 images from COCO train2017)
+# Example usage: python train.py --data coco128.yaml
+# parent
+# ├── yolov5
+# └── datasets
+#     └── coco128  ← downloads here
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+# path: ../coco128  # dataset root dir
+path: /export/lhf/data/universal_logo/universal_logo
+train: images/train  # train images (relative to 'path') 128 images
+val: images/val  # val images (relative to 'path') 128 images
+test:  # test images (optional)
+
+# Classes
+# nc: 80  # number of classes
+# names: ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light',
+#         'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow',
+#         'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee',
+#         'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard',
+#         'tennis racket', 'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple',
+#         'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch',
+#         'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone',
+#         'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear',
+#         'hair drier', 'toothbrush']  # class names
+
+nc: 103
+names: ['china-emblem', 'Sickle-hammer', 'ROCEmblem','gongqingtuan','jidi','isis', 'turkestan','nazi','hk','uyghur','tibet',
+        'falun','newtang', 'aboluowang', 'appledaily', 'dwnews', 'guozi', 'voa', 'mingjingnews', 'setnews', 'shenyun', 'creaders',
+        'voice-of-tibet', 'eyectv', 'next-magazine', 'ltn', 'ketchuper', 'rfa', 'hkaspdmc', 'rebel-pepper', 'cctv', 'hunan-tv',
+        'china', 'hk-gov-flag', 'macau-gov-flag', 'america', 'organic-food', 'green-food', 'old-jd', 'qs', 'tmall', 'suning', 'wangwang',
+        'wechat','zhifubao','cat','jiyoujia','tao-word','juhuasuan','tao-doll','yu-e-bao','mayi-caifu','zhima-xinyong','hua-bai',
+        'mayi-jinrongyun','mayi','360-jinrong','didi-jinrong','weizhong-yinhang','xiecheng-jinrong','feng-niao','you-qian-hua',
+        'baidu-jinrong','duxiaoman-jinrong','meituan-xiaodai','junhui','jinghui','bayi','alibb','dangdang','doudian','douyin',
+        'feizhu','guomei','hema','kaola','mogujie','pdd','black-cat','v-cat','haokan-vedio','tencent-vedio','BiliBili','kuaishou','weishi','douyu',
+        'huya','xiaohongshu','xiguashipin','huoshan','youku','pipixia','miaopai','meipai','aiqiyi','baidu-vedio','souhu-vedio','wangyi',
+        'xinlang','baijiahao','qiehao','toutiao','dayuhao']
+
+
+
+# Download script/URL (optional)
+# download: https://github.com/ultralytics/yolov5/releases/download/v1.0/coco128.zip
